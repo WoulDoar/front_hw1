@@ -1,0 +1,540 @@
+*
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14pt;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+a:focus
+{
+    outline: 0;
+}
+
+input:focus
+{
+    outline: 0;
+}
+
+.main_container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.pink_logo_top
+{
+    margin-top: -20px;
+}
+
+/* Header */
+header
+{
+    background-image: url("images/header_back.png");
+    background-position-x: 50%;
+    height: 394px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
+header h1
+{
+    text-align: center;
+    align-self: center;
+    margin-top: 40px;
+}
+
+header h1 p
+{
+    color: white;
+    font-weight: 100;
+    font-size: 40pt;
+    margin: 0px;
+}
+
+/* Main menu */
+.main_menu
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 110px;
+    padding-left: 128px;
+    padding-right: 128px;
+    background:rgba(0, 0, 0, .3);
+}
+
+.main_menu a
+{
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.main_menu a:link{
+    color: white;
+}
+
+.main_menu a:visited{
+    color: white;
+}
+
+.main_menu a:hover {
+    color: #d22856;
+}
+
+.main_menu a:active{
+    color: white;
+    opacity: .3;
+}
+
+.main_menu nav
+{
+    margin-left: 170px;
+    flex-grow: 1;
+}
+
+.main_menu nav ul
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Main */
+main
+{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
+main *
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+.top_img
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.small_panel
+{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 940px;
+    padding: 0px;
+    margin: 0 auto;
+}
+
+main h1
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 240px;
+
+    text-align: center;
+    font-weight: normal;
+}
+
+.top_img_place
+{
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.top_img_place img
+{
+    width: 100%;
+}
+
+.top_tag
+{
+    color: white;
+    background: #d22856;
+    font-size: 10pt;
+    width: 140px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    right: 128px;
+    top: 55px;
+}
+
+.img_info
+{
+    background: #f2f2f2;
+    padding: 25px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.img_info p
+{
+    margin: 0px;
+    font-size: 12pt;
+}
+
+.img_info div
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.img_info .sender_name
+{
+    font-weight: bold;
+}
+
+.img_info .timepoint
+{
+    color: #A2A2A2;
+    margin-left: 4px;
+    font-size: 10pt;
+}
+
+.img_info .description
+{
+    flex-grow: 1;
+}
+
+.img_info .likes
+{
+    color: #d22856;
+    font-size: 10pt;
+    background: url(images/icon-heart.svg) no-repeat;
+    background-size: 18px 16px;
+    background-position-y: 50%;
+    background-position-x: 100%;
+    text-decoration: none;
+    cursor: pointer;
+    padding-right: 40px;
+    font-weight: 400;
+}
+
+.likes:link
+{
+    color: #d22856;
+}
+.likes:visited
+{
+    color: #d22856;
+}
+.likes:hover
+{
+    color: #d22856;
+}
+.likes:active
+{
+    color: #d22856;
+    opacity: .3;
+}
+
+/* Picture of the day */
+.top_img .img_info
+{
+    align-self: stretch;
+    position: relative;
+}
+
+.top_img .likes
+{
+    position: absolute;
+    right: 25px;
+    top: 25px;
+}
+
+/* Image list */
+.img_viewer
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    padding: 0px;
+    margin: 0px -10px;
+}
+
+.img_viewer li
+{
+    list-style-type: none;
+    display: block;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    width: 300px;
+    height: 550px;
+
+    margin: 50px 10px 10px 10px;
+
+    background: #f2f2f2;
+}
+
+.img_viewer .img_info
+{
+    height: 150px;
+}
+
+.img_viewer img
+{
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.img_viewer .likes
+{
+    justify-self: flex-end;
+}
+
+/* Upload panel */
+.upload_panel
+{
+    background: #f2f2f2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    padding: 0px 60px 60px 60px;
+}
+
+.upload_image
+{
+    width: 300px;
+    height: 400px;
+    margin: 60px 20px 0px 20px;
+}
+
+.upload_control_box
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    width: 410px;
+    margin: 60px 0px 0px 20px;
+}
+
+.upload_settings
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 1;
+    margin-top: -15px;
+}
+
+.upload_settings hr
+{
+    border: 1px solid #dddfe0;
+}
+
+/* Sliders */
+.slider_container
+{
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.slider_icon
+{
+    width: 44px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider_icon img
+{
+    margin: 0 auto;
+}
+
+.slider
+ {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 2px;
+    background: black;
+    outline: none;
+    flex-grow: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: url(images/slider.png);
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: url(images/slider.png);
+    cursor: pointer;
+  }
+
+/* Upload buttons */
+.upload_buttons
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-self: flex-end;
+    margin-top: 60px;
+}
+
+.upload_buttons button
+{
+    width: 183px;
+    height: 55px;
+    text-align: center;
+    padding: 0px;
+    font-weight: bold;
+
+    border-width: 3px;
+    border-radius: 27px;
+    border-style: solid;
+    
+}
+
+.upload_button
+{
+    color: #d22856;
+    border-color: #d22856;
+    background: transparent;
+}
+.upload_button:hover
+{
+    color: white;
+    background: #d22856;
+}
+.upload_button:active
+{
+    color: rgba(255, 255, 255, .3);
+    background: #d22856;
+}
+
+.cancel_button
+{
+    color: #DDDFE0;
+    border-color: #DDDFE0;
+    background: transparent;
+}
+.cancel_button:hover
+{
+    color: #B5B9BE;
+    border-color: #B5B9BE;
+}
+.cancel_button:active
+{
+    color: rgba(255, 255, 255, .3);
+    background: #B5B9BE;
+}
+
+/* Footer */
+
+footer
+{
+    padding: 100px 0px;
+    display: block;
+}
+
+footer .small_panel
+{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer ul
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+footer ul li
+{
+    list-style-type: none;
+    margin: 0 7px;
+}
+
+footer ul a
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+    
+    color: red;
+    border: 3px solid #DDDFE0;
+    border-radius: 50%;
+}
+
+footer ul a:hover
+{
+    border-color: black;
+}
+
+footer ul a:active
+{
+    border-color: #DDDFE0;
+    opacity: .4;
+}
+
+address
+{
+    display: block;
+    padding: 10px 40px 10px 10px;
+    background: url(images/htmlacademy.png);
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-position-x: 100%;
+}
