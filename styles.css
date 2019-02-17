@@ -45,16 +45,10 @@ header
 header h1
 {
     text-align: center;
-    align-self: center;
     margin-top: 40px;
-}
-
-header h1 p
-{
     color: white;
     font-weight: 100;
     font-size: 40pt;
-    margin: 0px;
 }
 
 /* Main menu */
@@ -144,7 +138,7 @@ main *
     margin: 0 auto;
 }
 
-main h1
+.wide_p
 {
     display: flex;
     flex-direction: column;
@@ -389,7 +383,7 @@ main h1
 }
 
 .slider
- {
+{
     -webkit-appearance: none;
     appearance: none;
     width: 100%;
@@ -397,23 +391,34 @@ main h1
     background: black;
     outline: none;
     flex-grow: 1;
-  }
-  
-  .slider::-webkit-slider-thumb {
+}
+
+.slider::-webkit-slider-thumb
+{
     -webkit-appearance: none;
     appearance: none;
     width: 16px;
     height: 16px;
-    background: url(images/slider.png);
+    background: url(images/slider.svg)  no-repeat;
     cursor: pointer;
-  }
-  
-  .slider::-moz-range-thumb {
+}
+
+.slider::-webkit-slider-thumb:active
+{
+    background: url(images/slider-active.svg)  no-repeat;
+}
+
+.slider::-moz-range-thumb {
     width: 16px;
     height: 16px;
-    background: url(images/slider.png);
+    background: url(images/slider.svg)  no-repeat;
     cursor: pointer;
-  }
+}
+
+.slider::-moz-range-thumb:active
+{
+    background: url(images/slider-active.svg)  no-repeat;
+}
 
 /* Upload buttons */
 .upload_buttons
@@ -436,7 +441,6 @@ main h1
     border-width: 3px;
     border-radius: 27px;
     border-style: solid;
-    
 }
 
 .upload_button
