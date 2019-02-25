@@ -30,7 +30,7 @@
 
         <main class="large_panel">
             <p class="wide_p">
-                Взгляните на фотографии, которые выкладывают пользователи!<br>Видите, как не хватает Ваших?
+                Взгляните на фотографии, которые выкладывают пользователи!<br>Видите, как не хватает ваших?
             </p>
 
             <a class="top_img_container" href="images/top.jpg" target="_blank">
@@ -39,13 +39,13 @@
             </a>
 
             <div class="small_panel">
-                <div class="img_info">
+                <div class="img_info" id="top_img_info">
                     <div>
                         <p class="sender_name">Анна</p>
                         <p class="timepoint">(5 МИНУТ НАЗАД)</p>
-                        <a class="likes">НРАВИТСЯ: 215</a>
                     </div>
-                    <p class="description">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+                    <a class="likes">НРАВИТСЯ: 215</a>
+                    <p class="description">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
                 </div>
 
                 <ul class="img_viewer">
@@ -129,7 +129,7 @@
                                     <p class="timepoint">(40 ЧАСОВ НАЗАД)</p>
                                 </div>
                                 <p class="description">Где снег-то?</p>
-                                <a class="likes">НРАВИТСЯ: 4</a>
+                                <a class="likes">НРАВИТСЯ: 150</a>
                             </figcaption>
                         </figure>
                     </li>
@@ -146,13 +146,13 @@
                                     <p class="timepoint">(45 ЧАСОВ НАЗАД)</p>
                                 </div>
                                 <p class="description">Всем GM и взаимные лайки!</p>
-                                <a class="likes">НРАВИТСЯ: 4</a>
+                                <a class="likes">НРАВИТСЯ: 2560</a>
                             </figcaption>
                         </figure>
                     </li>
                 </ul>
 
-                <p class="wide_p">
+                <p class="upload_p">
                     Затмите их всех!
                     <br/>Выкладывайте все, что накопилось в телефоне!
                 </p>
@@ -161,17 +161,14 @@
 
                     <div class="upload_control_box">
                         <div class="upload_settings">
-                            <div class="slider_container">
-                                <div class="slider_icon"><img src="images/crop.png" alt="Обрезание" /></div>
-                                <input type="range" min="1" max="100" value="50" class="slider" />
+                            <div class="slider_container slider_crop">
+                                <input type="range" min="1" max="100" value="27" class="slider" />
                             </div>
-                            <div class="slider_container">
-                                <div class="slider_icon"><img src="images/fill.png" alt="Заливка" /></div>
-                                <input type="range" min="1" max="100" value="50" class="slider" />
+                            <div class="slider_container slider_fill">
+                                <input type="range" min="1" max="100" value="90.45" class="slider" />
                             </div>
-                            <div class="slider_container">
-                                <div class="slider_icon"><img src="images/contrast.png" alt="Контраст" /></div>
-                                <input type="range" min="1" max="100" value="50" class="slider" />
+                            <div class="slider_container slider_contrast">
+                                <input type="range" min="1" max="100" value="59" class="slider" />
                             </div>
                         </div>
                         <div class="upload_buttons">
@@ -183,8 +180,8 @@
             </div>
         </main>
 
-        <footer class="small_panel">
-            <img class="pink_logo_top"
+        <footer class="small_panel footer">
+            <img class="pink_logo_bottom"
                     src="images/logotype-blue-desktop.png"
                     alt="Pink Logo" />
             

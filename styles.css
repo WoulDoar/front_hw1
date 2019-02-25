@@ -1,25 +1,41 @@
+/* open-sans-300 - latin_cyrillic */
 @font-face
 {
     font-family: 'Open Sans';
-    src: url('fonts/OpenSans-Regular.ttf');
-    font-weight: normal;
     font-style: normal;
+    font-weight: 300;
+    src: local('Open Sans Light'), local('OpenSans-Light'),
+            url('fonts/open-sans-v15-latin_cyrillic-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('fonts/open-sans-v15-latin_cyrillic-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-
+/* open-sans-regular - latin_cyrillic */
 @font-face
 {
     font-family: 'Open Sans';
-    src: url('fonts/OpenSans-Light.ttf');
-    font-weight: lighter;
     font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans Regular'), local('OpenSans-Regular'),
+            url('fonts/open-sans-v15-latin_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('fonts/open-sans-v15-latin_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-
+/* open-sans-600 - latin_cyrillic */
 @font-face
 {
     font-family: 'Open Sans';
-    src: url('fonts/OpenSans-Bold.ttf');
-    font-weight: bold;
     font-style: normal;
+    font-weight: 600;
+    src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'),
+            url('fonts/open-sans-v15-latin_cyrillic-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('fonts/open-sans-v15-latin_cyrillic-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* open-sans-700 - latin_cyrillic */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Open Sans Bold'), local('OpenSans-Bold'),
+         url('fonts/open-sans-v15-latin_cyrillic-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('fonts/open-sans-v15-latin_cyrillic-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 *
@@ -86,14 +102,14 @@ h1
     text-align: center;
     margin-top: 63px;
     color: white;
-    font-weight: normal;
+    font-weight: 300;
     font-size: 50px;
     line-height: 60px;
 }
 
 .pink_logo_top
 {
-    margin-top: -20px;
+    margin-top: -16px;
 }
 
 /* Main menu */
@@ -104,7 +120,7 @@ h1
     justify-content: flex-start;
     align-items: center;
     min-height: 110px;
-    padding: 0px 128px;
+    padding: 0px 130px;
     background:rgba(0, 0, 0, .3);
 }
 
@@ -136,6 +152,7 @@ h1
 {
     margin-left: 170px;
     flex-grow: 1;
+    margin: -2px -1px 0px 172px;
 }
 
 .main_menu nav ul
@@ -173,7 +190,8 @@ main
     justify-content: center;
     align-items: center;
     height: 240px;
-
+    line-height: 30px;
+    padding-top: 3px;
     text-align: center;
     font-weight: normal;
 }
@@ -196,21 +214,18 @@ main
     display: flex;
     justify-content: center;
     align-items: center;
-
     position: absolute;
     right: 130px;
     top: 54px;
+    padding-bottom: 2px;
 }
 
 .img_info
 {
     background: #f2f2f2;
-    padding: 26px 27px;
+    padding: 26px 28px;
     margin: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
+    position: relative;
 }
 
 .img_info p
@@ -230,7 +245,7 @@ main
 
 .img_info .sender_name
 {
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .img_info .timepoint
@@ -249,14 +264,15 @@ main
 .img_info .likes
 {
     color: #d22856;
-    font-size: 10pt;
+    font-size: 12px;
     background: url(images/icon-heart.svg) no-repeat;
     background-size: 18px 16px;
     background-position-y: 50%;
     background-position-x: 100%;
     text-decoration: none;
     cursor: pointer;
-    padding-right: 40px;
+    padding-right: 33px;
+    padding-top: 2px;
     font-weight: 400;
 }
 
@@ -285,11 +301,11 @@ main
     position: relative;
 }
 
-.top_img .likes
+#top_img_info .likes
 {
     position: absolute;
-    right: 25px;
-    top: 25px;
+    right: 29px;
+    top: 27px;
 }
 
 /* Image list */
@@ -312,10 +328,8 @@ main
     align-items: stretch;
     justify-content: flex-start;
     width: 300px;
-    height: 550px;
-
-    margin: 50px 10px 10px 10px;
-
+    height: 555px;
+    margin: 50px 10px 4px 10px;
     background: #f2f2f2;
 }
 
@@ -335,7 +349,26 @@ main
 
 .img_viewer .likes
 {
-    justify-self: flex-end;
+    position: absolute;
+    left: 28px;
+    right: 29px;
+    bottom: 21px;
+}
+
+.img_viewer .description
+{
+    line-height: 24px;
+    margin-top: 3px;
+}
+
+
+.upload_p
+{
+    font-stretch: expanded;
+    text-align: center;
+    margin: 55px 0px 65px 0px;
+    line-height: 30px;
+    text-indent: 5px;
 }
 
 /* Upload panel */
@@ -347,14 +380,14 @@ main
     justify-content: space-between;
     align-items: stretch;
     flex-wrap: wrap;
-    padding: 0px 60px 60px 60px;
+    padding: 58px;
 }
 
 .upload_image
 {
     width: 300px;
     height: 400px;
-    margin: 60px 20px 0px 20px;
+    margin: 0px 22px;
 }
 
 .upload_control_box
@@ -363,8 +396,8 @@ main
     flex-direction: column;
     justify-content: flex-start;
     flex-wrap: nowrap;
-    width: 410px;
-    margin: 60px 0px 0px 20px;
+    width: 412px;
+    margin: 0px;
 }
 
 .upload_settings
@@ -373,7 +406,7 @@ main
     flex-direction: column;
     justify-content: flex-start;
     flex-grow: 1;
-    margin-top: -15px;
+    margin-top: -14px;
 }
 
 .upload_settings hr
@@ -389,20 +422,29 @@ main
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    border: 0px;
+    border-bottom: 1px;
+    border-color: #dddfe0;
+    border-style: solid;
+    padding: 0px 32px 1px 92px;
+    background-position-y: 12px;
+    background-repeat: no-repeat;
 }
 
-.slider_icon
+.slider_crop
 {
-    width: 44px;
-    margin-right: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-image: url(images/crop.png);
 }
-
-.slider_icon img
+.slider_fill
 {
-    margin: 0 auto;
+    background-image: url(images/fill.png);
+    margin-top: 3px;
+}
+.slider_contrast
+{
+    background-image: url(images/contrast.png);
+    background-position-x: 6px;
+    background-position-y: 18px;
 }
 
 .slider
@@ -420,8 +462,8 @@ main
 {
     -webkit-appearance: none;
     appearance: none;
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
     background: url(images/slider.svg)  no-repeat;
     cursor: pointer;
 }
@@ -432,8 +474,8 @@ main
 }
 
 .slider::-moz-range-thumb {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
     background: url(images/slider.svg)  no-repeat;
     cursor: pointer;
 }
@@ -451,6 +493,7 @@ main
     justify-content: space-between;
     justify-self: flex-end;
     margin-top: 60px;
+    margin-right: 2px;
 }
 
 .upload_buttons button
@@ -458,7 +501,7 @@ main
     width: 183px;
     height: 55px;
     text-align: center;
-    padding: 0px;
+    padding: 0px 0px 4px 5px;
     font-weight: bold;
 
     border-width: 3px;
@@ -502,17 +545,17 @@ main
 
 /* Footer */
 
-footer
+.footer
 {
-    padding: 100px 0px;
-    display: block;
-}
-
-footer .small_panel
-{
+    padding: 101px 0px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.pink_logo_bottom
+{
+    margin-top: -16px;
 }
 
 footer ul
@@ -523,6 +566,7 @@ footer ul
     align-items: center;
     padding: 0px;
     margin: 0px;
+    margin-left: 25px;
 }
 
 footer ul li
@@ -559,9 +603,10 @@ footer ul a:active
 address
 {
     display: block;
+    font-style: normal;
     padding: 10px 40px 10px 10px;
     background: url(images/htmlacademy.png);
     background-repeat: no-repeat;
-    background-position-y: 50%;
+    background-position-y: 80%;
     background-position-x: 100%;
 }
